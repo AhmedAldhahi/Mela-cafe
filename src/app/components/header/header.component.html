@@ -1,1 +1,84 @@
-<p>header works!</p>
+<header class="w-full fixed top-0 left-0 bg-white shadow z-50">
+  <div class="max-w-7xl mx-auto px-6 py-4 flex justify-between items-center">
+    <!-- Logo + Brand Name -->
+    <div class="flex items-center space-x-3">
+      <img
+        src="../../../assets/images/logo.png"
+        width="50"
+        class="rounded"
+        alt="Logo"
+      />
+      <span class="text-xl font-bold text-gray-800 tracking-wide"
+        >Mela Café</span
+      >
+    </div>
+
+    <!-- Hamburger Icon (Mobile) -->
+    <div class="md:hidden">
+      <button (click)="toggleMenu()" class="text-gray-800 focus:outline-none">
+        <svg
+          class="w-6 h-6"
+          fill="none"
+          stroke="currentColor"
+          viewBox="0 0 24 24"
+        >
+          <path
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            stroke-width="2"
+            d="M4 6h16M4 12h16M4 18h16"
+          />
+        </svg>
+      </button>
+    </div>
+
+    <!-- Navigation Links (Desktop) -->
+    <nav class="space-x-6 text-gray-700 font-medium hidden md:block">
+      <a href="/" class="hover:text-black transition">Home</a>
+      <a href="/menu" class="hover:text-black transition">Menu</a>
+      <a href="/catering" class="hover:text-black transition">Catering</a>
+      <a href="/contact" class="hover:text-black transition">Contact</a>
+    </nav>
+
+    <!-- Book Now Button (Desktop) -->
+    <div class="hidden md:block">
+      <a
+        href="#booking"
+        class="bg-black text-white px-4 py-2 rounded hover:bg-gray-800 transition"
+      >
+        Book Now
+      </a>
+    </div>
+  </div>
+
+  <!-- Mobile Menu: Smooth Slide Down -->
+  <div
+    class="md:hidden overflow-hidden transition-all duration-700 ease-in-out"
+    [ngClass]="{
+      'max-h-[500px]': isMenuOpen,
+      'max-h-0': !isMenuOpen
+    }"
+  >
+    <nav class="flex flex-col space-y-2 text-gray-700 font-medium px-6 py-4">
+      <a href="/" class="hover:text-black transition">Home</a>
+      <a href="/menu" class="hover:text-black transition">Menu</a>
+      <a href="/catering" class="hover:text-black transition">Catering</a>
+      <a href="/contact" class="hover:text-black transition">Contact</a>
+      <a
+        href="#booking"
+        class="bg-black text-white text-center py-2 rounded hover:bg-gray-800 transition"
+      >
+        Book Now
+      </a>
+    </nav>
+  </div>
+</header>
+
+<script>
+  const toggleBtn = document.getElementById("menu-toggle");
+  const mobileMenu = document.getElementById("mobile-menu");
+
+  toggleBtn.addEventListener("click", () => {
+    mobileMenu.classList.toggle("hidden");
+  });
+</script>
