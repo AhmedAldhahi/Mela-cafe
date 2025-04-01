@@ -2,15 +2,17 @@
   <div class="max-w-7xl mx-auto px-6 py-4 flex justify-between items-center">
     <!-- Logo + Brand Name -->
     <div class="flex items-center space-x-3">
-      <img
-        src="../../../assets/images/logo.png"
-        width="50"
-        class="rounded"
-        alt="Logo"
-      />
-      <span class="text-xl font-bold text-gray-800 tracking-wide"
-        >Mela Café</span
-      >
+      <a href="/" class="flex items-center space-x-3">
+        <img
+          src="../../../assets/images/logo.png"
+          width="50"
+          class="rounded"
+          alt="Logo"
+        />
+        <span class="text-xl font-bold text-gray-800 tracking-wide"
+          >Mela Café</span
+        >
+      </a>
     </div>
 
     <!-- Hamburger Icon (Mobile) -->
@@ -33,9 +35,15 @@
     </div>
 
     <!-- Navigation Links (Desktop) -->
-    <nav class="space-x-6 text-gray-700 font-medium hidden md:flex md:items-center">
+    <nav
+      class="space-x-6 text-gray-700 font-medium hidden md:flex md:items-center"
+    >
       <a href="/" class="hover:text-black transition">Home</a>
-      <a [routerLink]="['/menu']" fragment="main-courses" class="hover:text-black transition">
+      <a
+        [routerLink]="['/menu']"
+        fragment="main-courses"
+        class="hover:text-black transition"
+      >
         Menu
       </a>
       <a href="/catering" class="hover:text-black transition">Catering</a>
@@ -72,7 +80,11 @@
   >
     <nav class="flex flex-col space-y-2 text-gray-700 font-medium px-6 py-4">
       <a href="/" class="hover:text-black transition">Home</a>
-      <a [routerLink]="['/menu']" fragment="main-courses" class="hover:text-black transition">
+      <a
+        [routerLink]="['/menu']"
+        fragment="main-courses"
+        class="hover:text-black transition"
+      >
         Menu
       </a>
       <a href="/catering" class="hover:text-black transition">Catering</a>
