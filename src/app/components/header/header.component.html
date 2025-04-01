@@ -33,11 +33,22 @@
     </div>
 
     <!-- Navigation Links (Desktop) -->
-    <nav class="space-x-6 text-gray-700 font-medium hidden md:block">
+    <nav class="space-x-6 text-gray-700 font-medium hidden md:flex md:items-center">
       <a href="/" class="hover:text-black transition">Home</a>
-      <a href="/menu" class="hover:text-black transition">Menu</a>
+      <a [routerLink]="['/menu']" fragment="main-courses" class="hover:text-black transition">
+        Menu
+      </a>
       <a href="/catering" class="hover:text-black transition">Catering</a>
       <a href="/contact" class="hover:text-black transition">Contact</a>
+
+      <!-- Language Switcher Dropdown -->
+      <select
+        (change)="switchLang($event)"
+        class="border border-gray-300 rounded-md py-1 px-2 text-sm cursor-pointer"
+      >
+        <option value="en">English</option>
+        <option value="no">Norsk</option>
+      </select>
     </nav>
 
     <!-- Book Now Button (Desktop) -->
@@ -61,7 +72,9 @@
   >
     <nav class="flex flex-col space-y-2 text-gray-700 font-medium px-6 py-4">
       <a href="/" class="hover:text-black transition">Home</a>
-      <a href="/menu" class="hover:text-black transition">Menu</a>
+      <a [routerLink]="['/menu']" fragment="main-courses" class="hover:text-black transition">
+        Menu
+      </a>
       <a href="/catering" class="hover:text-black transition">Catering</a>
       <a href="/contact" class="hover:text-black transition">Contact</a>
       <a
@@ -70,15 +83,15 @@
       >
         Book Now
       </a>
+
+      <!-- Mobile Language Switcher Dropdown -->
+      <select
+        (change)="switchLang($event)"
+        class="border border-gray-300 rounded-md py-1 px-2 text-sm cursor-pointer mt-2"
+      >
+        <option value="en">English</option>
+        <option value="no">Norsk</option>
+      </select>
     </nav>
   </div>
 </header>
-
-<script>
-  const toggleBtn = document.getElementById("menu-toggle");
-  const mobileMenu = document.getElementById("mobile-menu");
-
-  toggleBtn.addEventListener("click", () => {
-    mobileMenu.classList.toggle("hidden");
-  });
-</script>

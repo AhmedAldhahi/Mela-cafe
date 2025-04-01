@@ -1,1 +1,81 @@
-<p>drink-menu works!</p>
+<nav class="sticky top-16 z-40 bg-white shadow px-4 py-2 text-sm text-center">
+  <div class="flex flex-wrap justify-center gap-3">
+    <a
+      [routerLink]="[]"
+      fragment="come"
+      class="px-3 py-1 rounded bg-gray-200 hover:bg-gray-300 transition"
+      >🥂 Come</a
+    >
+    <a
+      [routerLink]="[]"
+      fragment="whisky"
+      class="px-3 py-1 rounded bg-gray-200 hover:bg-gray-300 transition"
+      >🥃 Whisky</a
+    >
+    <a
+      [routerLink]="[]"
+      fragment="hetvin"
+      class="px-3 py-1 rounded bg-gray-200 hover:bg-gray-300 transition"
+      >🍷 Hetvin</a
+    >
+    <a
+      [routerLink]="[]"
+      fragment="cognac"
+      class="px-3 py-1 rounded bg-gray-200 hover:bg-gray-300 transition"
+      >🧊 Cognac</a
+    >
+    <a
+      [routerLink]="[]"
+      fragment="other"
+      class="px-3 py-1 rounded bg-gray-200 hover:bg-gray-300 transition"
+      >🍹 Other</a
+    >
+    <a
+      [routerLink]="[]"
+      fragment="beer/misc"
+      class="px-3 py-1 rounded bg-gray-200 hover:bg-gray-300 transition"
+      >🍺 Beer</a
+    >
+  </div>
+</nav>
+<div class="max-w-5xl mx-auto px-4 py-12 space-y-12">
+  <section class="scroll-mt-32" [attr.id]="cat.toLowerCase()" *ngFor="let cat of drinkCategories">
+    <h2 class="text-3xl font-bold mb-6 border-b pb-2">{{ cat }}</h2>
+
+    <!-- Show subcategories inside 'Come' -->
+    <ng-container *ngIf="cat === 'Come'; else noGrouping">
+      <div *ngFor="let sub of getSubCategories('Come')" class="mb-8">
+        <h3 class="text-2xl font-semibold text-gray-800 mb-4">{{ sub }}</h3>
+        <div *ngFor="let item of getDrinksBySubCategory('Come', sub)">
+          <div class="flex justify-between items-start">
+            <h4 class="text-lg font-semibold">{{ item.name }}</h4>
+            <span class="text-sm text-gray-600">{{ item.price }}</span>
+          </div>
+          <p class="text-sm text-gray-700">{{ item.description }}</p>
+          <p
+            *ngIf="item.allergens.length"
+            class="text-xs text-gray-500 italic mt-1"
+          >
+            Allergens: {{ item.allergens.join(", ") }}
+          </p>
+        </div>
+      </div>
+    </ng-container>
+
+    <ng-template #noGrouping>
+      <div *ngFor="let item of getDrinksByCategory(cat)" class="mb-6">
+        <div class="flex justify-between items-start">
+          <h3 class="text-lg font-semibold">{{ item.name }}</h3>
+          <span class="text-sm text-gray-600">{{ item.price }}</span>
+        </div>
+        <p class="text-sm text-gray-700">{{ item.description }}</p>
+        <p
+          *ngIf="item.allergens.length"
+          class="text-xs text-gray-500 italic mt-1"
+        >
+          Allergens: {{ item.allergens.join(", ") }}
+        </p>
+      </div>
+    </ng-template>
+  </section>
+</div>

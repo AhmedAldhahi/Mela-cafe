@@ -1,1 +1,171 @@
-<p>food-menu works!</p>
+<nav class="sticky top-16 z-40 bg-white shadow px-4 py-2 text-sm text-center">
+  <div class="flex flex-wrap justify-center gap-3">
+    <a
+      [routerLink]="[]"
+      fragment="mezah"
+      class="px-3 py-1 rounded bg-gray-200 hover:bg-gray-300"
+      >🥙 Mezah</a
+    >
+    <a
+      [routerLink]="[]"
+      fragment="lunch"
+      class="px-3 py-1 rounded bg-gray-200 hover:bg-gray-300"
+      >🥗 Lunch</a
+    >
+    <a
+      [routerLink]="[]"
+      fragment="main-courses"
+      class="px-3 py-1 rounded bg-gray-200 hover:bg-gray-300"
+      >🍛 Main Courses</a
+    >
+    <a
+      [routerLink]="[]"
+      fragment="hummus"
+      class="px-3 py-1 rounded bg-gray-200 hover:bg-gray-300"
+      >🧆 Hummus</a
+    >
+    <a
+      [routerLink]="[]"
+      fragment="vegan"
+      class="px-3 py-1 rounded bg-gray-200 hover:bg-gray-300"
+      >🌱 Vegan</a
+    >
+    <a
+      [routerLink]="[]"
+      fragment="soups"
+      class="px-3 py-1 rounded bg-gray-200 hover:bg-gray-300"
+      >🍲 Soups</a
+    >
+    <a
+      [routerLink]="[]"
+      fragment="desserts"
+      class="px-3 py-1 rounded bg-gray-200 hover:bg-gray-300"
+      >🍰 Desserts</a
+    >
+
+    <a [routerLink]="[]" fragment="drinks" class="px-3 py-1 rounded bg-gray-200 hover:bg-gray-300">🍷 Drinks</a>
+  </div>
+</nav>
+
+<div class="max-w-5xl mx-auto px-4 py-12 space-y-12">
+  <!-- SECTION TEMPLATE -->
+  <section id="lunch" class="scroll-mt-32" *ngIf="lunchMenu.length">
+    <h2 class="text-3xl font-bold mb-6 border-b pb-2">Lunch Menu</h2>
+    <div *ngFor="let item of lunchMenu" class="mb-6">
+      <div class="flex justify-between items-start">
+        <h3 class="text-lg font-semibold">{{ item.name }}</h3>
+        <span class="text-sm text-gray-600">{{ item.price }}</span>
+      </div>
+      <p class="text-sm text-gray-700">{{ item.description }}</p>
+      <p
+        class="text-xs text-gray-500 italic mt-1"
+        *ngIf="item.allergens.length"
+      >
+        Allergens: {{ item.allergens.join(", ") }}
+      </p>
+    </div>
+  </section>
+
+  <!-- Repeat this block for each category below -->
+  <section id="main-courses" class="scroll-mt-32" *ngIf="mainCourses.length">
+    <h2 class="text-3xl font-bold mb-6 border-b pb-2">Main Courses</h2>
+    <div *ngFor="let item of mainCourses" class="mb-6">
+      <div class="flex justify-between items-start">
+        <h3 class="text-lg font-semibold">{{ item.name }}</h3>
+        <span class="text-sm text-gray-600">{{ item.price }}</span>
+      </div>
+      <p class="text-sm text-gray-700">{{ item.description }}</p>
+      <p
+        class="text-xs text-gray-500 italic mt-1"
+        *ngIf="item.allergens.length"
+      >
+        Allergens: {{ item.allergens.join(", ") }}
+      </p>
+    </div>
+  </section>
+
+  <section id="mezah" class="scroll-mt-32" *ngIf="mezahMenu.length">
+    <h2 class="text-3xl font-bold mb-6 border-b pb-2">Mezah</h2>
+    <div *ngFor="let item of mezahMenu" class="mb-6">
+      <div class="flex justify-between items-start">
+        <h3 class="text-lg font-semibold">{{ item.name }}</h3>
+        <span class="text-sm text-gray-600">{{ item.price }}</span>
+      </div>
+      <p class="text-sm text-gray-700">{{ item.description }}</p>
+      <p
+        class="text-xs text-gray-500 italic mt-1"
+        *ngIf="item.allergens.length"
+      >
+        Allergens: {{ item.allergens.join(", ") }}
+      </p>
+    </div>
+  </section>
+
+  <section id="hummus" class="scroll-mt-32" class="scroll-mt-24" *ngIf="hummusEmpireMenu.length">
+    <h2 class="text-3xl font-bold mb-6 border-b pb-2">Hummus Empire</h2>
+    <div *ngFor="let item of hummusEmpireMenu" class="mb-6">
+      <div class="flex justify-between items-start">
+        <h3 class="text-lg font-semibold">{{ item.name }}</h3>
+        <span class="text-sm text-gray-600">{{ item.price }}</span>
+      </div>
+      <p class="text-sm text-gray-700">{{ item.description }}</p>
+      <p
+        class="text-xs text-gray-500 italic mt-1"
+        *ngIf="item.allergens.length"
+      >
+        Allergens: {{ item.allergens.join(", ") }}
+      </p>
+    </div>
+  </section>
+
+  <section id="vegan" class="scroll-mt-32" *ngIf="veganMenu.length">
+    <h2 class="text-3xl font-bold mb-6 border-b pb-2">Vegan Options</h2>
+    <div *ngFor="let item of veganMenu" class="mb-6">
+      <div class="flex justify-between items-start">
+        <h3 class="text-lg font-semibold">{{ item.name }}</h3>
+        <span class="text-sm text-gray-600">{{ item.price }}</span>
+      </div>
+      <p class="text-sm text-gray-700">{{ item.description }}</p>
+      <p
+        class="text-xs text-gray-500 italic mt-1"
+        *ngIf="item.allergens.length"
+      >
+        Allergens: {{ item.allergens.join(", ") }}
+      </p>
+    </div>
+  </section>
+
+  <section id="soups" class="scroll-mt-32" *ngIf="soups.length">
+    <h2 class="text-3xl font-bold mb-6 border-b pb-2">Soups</h2>
+    <div *ngFor="let item of soups" class="mb-6">
+      <div class="flex justify-between items-start">
+        <h3 class="text-lg font-semibold">{{ item.name }}</h3>
+        <span class="text-sm text-gray-600">{{ item.price }}</span>
+      </div>
+      <p class="text-sm text-gray-700">{{ item.description }}</p>
+      <p
+        class="text-xs text-gray-500 italic mt-1"
+        *ngIf="item.allergens.length"
+      >
+        Allergens: {{ item.allergens.join(", ") }}
+      </p>
+    </div>
+  </section>
+
+  <section id="desserts" class="scroll-mt-32" *ngIf="desserts.length">
+    <h2 class="text-3xl font-bold mb-6 border-b pb-2">Desserts & Cakes</h2>
+    <div *ngFor="let item of desserts" class="mb-6">
+      <div class="flex justify-between items-start">
+        <h3 class="text-lg font-semibold">{{ item.name }}</h3>
+        <span class="text-sm text-gray-600">{{ item.price }}</span>
+      </div>
+      <p class="text-sm text-gray-700">{{ item.description }}</p>
+      <p
+        class="text-xs text-gray-500 italic mt-1"
+        *ngIf="item.allergens.length"
+      >
+        Allergens: {{ item.allergens.join(", ") }}
+      </p>
+    </div>
+  </section>
+</div>
