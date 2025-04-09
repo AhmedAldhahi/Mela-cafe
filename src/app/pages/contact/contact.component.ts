@@ -1,3 +1,4 @@
+import { HttpClient } from '@angular/common/http';
 import { Component } from '@angular/core';
 import { FormGroup, FormBuilder, Validators } from '@angular/forms';
 
@@ -8,8 +9,11 @@ import { FormGroup, FormBuilder, Validators } from '@angular/forms';
 })
 export class ContactComponent {
   contactForm!: FormGroup;
+  successMessage: string = '';
+  errorMessage: string = '';
 
-  constructor(private fb: FormBuilder) {}
+  constructor(private fb: FormBuilder, private http: HttpClient) {}
+
 
   ngOnInit(): void {
     this.contactForm = this.fb.group({
@@ -25,22 +29,23 @@ export class ContactComponent {
 
   onSubmit(): void {
     if (this.contactForm.valid) {
-      const name = this.contactForm.value.name;
-      const email = this.contactForm.value.email;
-      const message = this.contactForm.value.message;
+      const formData = this.contactForm.value;
 
-      // Subject & body
-      const subject = encodeURIComponent(`Contact Request from ${name}`);
-      const body = encodeURIComponent(`Name: ${name}\nEmail: ${email}\n\n${message}`);
-
-      // Create mailto link
-      const mailtoLink = `mailto:post@melacafe.no?subject=${subject}&body=${body}`;
-
-      // Open user's default mail app with the message
-      window.location.href = mailtoLink;
-
-      // Optional: reset form (since we handled sending)
-      this.contactForm.reset();
+      this.http.post('http://localhost:3000/api/send-contact-email', formData)
+        .subscribe({
+          next: () => {
+            this.successMessage = 'Your message has been sent successfully!';
+            this.errorMessage = '';
+            this.contactForm.reset();
+            setTimeout(() => this.successMessage = '', 5000);
+          },
+          error: (error) => {
+            console.error('Error sending contact form:', error);
+            this.errorMessage = 'Something went wrong. Please try again later.';
+            this.successMessage = '';
+            setTimeout(() => this.errorMessage = '', 5000);
+          }
+        });
     }
   }
 }

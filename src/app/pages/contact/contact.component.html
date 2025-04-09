@@ -86,6 +86,13 @@
               Send Message
             </button>
           </form>
+          <div *ngIf="successMessage" class="text-green-600 text-center mt-4">
+            {{ successMessage }}
+          </div>
+          <div *ngIf="errorMessage" class="text-red-600 text-center mt-4">
+            {{ errorMessage }}
+          </div>
+          
         </div>
       </div>
     </div>

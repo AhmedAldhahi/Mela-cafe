@@ -1,3 +1,4 @@
+import { HttpClient } from '@angular/common/http';
 import { Component } from '@angular/core';
 import { FormGroup, FormControl, Validators } from '@angular/forms';
 
@@ -7,7 +8,10 @@ import { FormGroup, FormControl, Validators } from '@angular/forms';
   styleUrl: './booking.component.scss'
 })
 export class BookingComponent {
-
+  constructor(private http: HttpClient) {}
+  successMessage: string = '';
+  errorMessage: string = '';
+  
   bookEventForm = new FormGroup({
     name: new FormControl('', [Validators.required, Validators.minLength(3)]),
     email: new FormControl('', [Validators.required, Validators.email]),
@@ -36,10 +40,29 @@ export class BookingComponent {
     return this.bookEventForm.get('people');
   }
 
-  saveData(){
-    console.log("saved!!");
-    
+  saveData() {
+    if (this.bookEventForm.valid) {
+      const formData = this.bookEventForm.value;
+  
+      this.http.post('http://localhost:3000/api/send-booking-email', formData)
+        .subscribe({
+          next: (response: any) => {
+            this.successMessage = 'Your booking request has been sent successfully!';
+            this.errorMessage = '';
+            this.bookEventForm.reset();
+            setTimeout(() => this.successMessage = '', 5000); // Hide after 5 seconds
+          },
+          error: (error) => {
+            console.error('Error sending booking request', error);
+            this.errorMessage = 'Something went wrong. Please try again later.';
+            this.successMessage = '';
+
+            setTimeout(() => this.errorMessage = '', 5000); // Hide after 5 seconds
+          }
+        });
+    }
   }
+  
   
   
 }
