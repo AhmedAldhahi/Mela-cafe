@@ -1,43 +1,20 @@
-<nav class="sticky top-16 z-40 bg-white shadow px-4 py-2 text-sm text-center">
+<nav class="sticky top-20 z-40 bg-white shadow px-4 py-2 text-sm text-center">
   <div class="flex flex-wrap justify-center gap-3">
-    <a
-      [routerLink]="[]"
-      fragment="come"
-      class="px-3 py-1 rounded bg-gray-200 hover:bg-gray-300 transition"
-      >🥂 Come</a
-    >
-    <a
-      [routerLink]="[]"
-      fragment="whisky"
-      class="px-3 py-1 rounded bg-gray-200 hover:bg-gray-300 transition"
-      >🥃 Whisky</a
-    >
-    <a
-      [routerLink]="[]"
-      fragment="hetvin"
-      class="px-3 py-1 rounded bg-gray-200 hover:bg-gray-300 transition"
-      >🍷 Hetvin</a
-    >
-    <a
-      [routerLink]="[]"
-      fragment="cognac"
-      class="px-3 py-1 rounded bg-gray-200 hover:bg-gray-300 transition"
-      >🧊 Cognac</a
-    >
-    <a
-      [routerLink]="[]"
-      fragment="other"
-      class="px-3 py-1 rounded bg-gray-200 hover:bg-gray-300 transition"
-      >🍹 Other</a
-    >
-    <a
-      [routerLink]="[]"
-      fragment="beer/misc"
-      class="px-3 py-1 rounded bg-gray-200 hover:bg-gray-300 transition"
-      >🍺 Beer</a
-    >
+    <a [routerLink]="[]" fragment="coffee" class="px-3 py-1 rounded bg-gray-200 hover:bg-gray-300 transition">☕ Coffee</a>
+    <a [routerLink]="[]" fragment="the" class="px-3 py-1 rounded bg-gray-200 hover:bg-gray-300 transition">🍵 Tea</a>
+    <a [routerLink]="[]" fragment="hot chocolate" class="px-3 py-1 rounded bg-gray-200 hover:bg-gray-300 transition">🍫 Hot Chocolate</a>
+    <a [routerLink]="[]" fragment="lassi" class="px-3 py-1 rounded bg-gray-200 hover:bg-gray-300 transition">🥭 Lassi</a>
+    <a [routerLink]="[]" fragment="juice" class="px-3 py-1 rounded bg-gray-200 hover:bg-gray-300 transition">🧃 Juice</a>
+    <a [routerLink]="[]" fragment="mineral water" class="px-3 py-1 rounded bg-gray-200 hover:bg-gray-300 transition">💧 Mineral Water</a>
+    <a [routerLink]="[]" fragment="come" class="px-3 py-1 rounded bg-gray-200 hover:bg-gray-300 transition">🥂 Come</a>
+    <a [routerLink]="[]" fragment="whisky" class="px-3 py-1 rounded bg-gray-200 hover:bg-gray-300 transition">🥃 Whisky</a>
+    <a [routerLink]="[]" fragment="hetvin" class="px-3 py-1 rounded bg-gray-200 hover:bg-gray-300 transition">🍷 Hetvin</a>
+    <a [routerLink]="[]" fragment="cognac" class="px-3 py-1 rounded bg-gray-200 hover:bg-gray-300 transition">🧊 Cognac</a>
+    <a [routerLink]="[]" fragment="other" class="px-3 py-1 rounded bg-gray-200 hover:bg-gray-300 transition">🍹 Other</a>
+    <a [routerLink]="[]" fragment="beer/misc" class="px-3 py-1 rounded bg-gray-200 hover:bg-gray-300 transition">🍺 Beer</a>
   </div>
 </nav>
+
 <div class="max-w-5xl mx-auto px-4 py-12 space-y-12">
   <section class="scroll-mt-32" [attr.id]="cat.toLowerCase()" *ngFor="let cat of drinkCategories">
     <h2 class="text-3xl font-bold mb-6 border-b pb-2">{{ cat }}</h2>

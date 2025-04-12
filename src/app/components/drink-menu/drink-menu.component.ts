@@ -7,6 +7,299 @@ import { Component } from '@angular/core';
 })
 export class DrinkMenuComponent {
   drinksMenu = [
+    // ☕ Coffee
+    {
+      name: 'Coffee',
+      price: '36,-',
+      description: 'Freshly brewed coffee.',
+      category: 'coffee',
+      allergens: [],
+    },
+    {
+      name: 'Refill Coffee',
+      price: '16,-',
+      description: 'Refill your coffee cup.',
+      category: 'coffee',
+      allergens: [],
+    },
+    {
+      name: 'Arabic Coffee',
+      price: '36,-',
+      description: 'Traditional Arabic coffee.',
+      category: 'coffee',
+      allergens: [],
+    },
+    {
+      name: 'Espresso, single',
+      price: '36,-',
+      description: 'Rich single shot of espresso.',
+      category: 'coffee',
+      allergens: [],
+    },
+    {
+      name: 'Espresso, double',
+      price: '39,-',
+      description: 'Double shot of espresso.',
+      category: 'coffee',
+      allergens: [],
+    },
+    {
+      name: 'Americano',
+      price: '',
+      description: 'Smooth espresso with hot water.',
+      category: 'coffee',
+      allergens: ['M'],
+    },
+    {
+      name: 'Cappuccino',
+      price: '',
+      description: 'Espresso with steamed milk and foam.',
+      category: 'coffee',
+      allergens: ['M'],
+    },
+    {
+      name: 'Café Latte',
+      price: '',
+      description: 'Espresso with plenty of steamed milk.',
+      category: 'coffee',
+      allergens: ['M'],
+    },
+    {
+      name: 'Mocha Coffee',
+      price: '44,-',
+      description: 'Coffee with chocolate and milk.',
+      category: 'coffee',
+      allergens: ['M'],
+    },
+
+    // 🍵 Tea
+    {
+      name: 'Sage Tea',
+      price: '',
+      description: 'Herbal sage tea.',
+      category: 'the',
+      allergens: [],
+    },
+    {
+      name: 'Mint Tea',
+      price: '',
+      description: 'Refreshing mint tea.',
+      category: 'the',
+      allergens: [],
+    },
+    {
+      name: 'Cinnamon Tea',
+      price: '',
+      description: 'Aromatic cinnamon tea.',
+      category: 'the',
+      allergens: [],
+    },
+    {
+      name: 'Cardamom Tea',
+      price: '',
+      description: 'Spicy cardamom tea.',
+      category: 'the',
+      allergens: [],
+    },
+    {
+      name: 'Rooibos Tea',
+      price: '',
+      description: 'South African herbal tea.',
+      category: 'the',
+      allergens: [],
+    },
+    {
+      name: 'Green Tea',
+      price: '',
+      description: 'Light and refreshing green tea.',
+      category: 'the',
+      allergens: [],
+    },
+    {
+      name: 'Ginger Tea',
+      price: '',
+      description: 'Warming ginger tea.',
+      category: 'the',
+      allergens: [],
+    },
+    {
+      name: 'Masala Chai',
+      price: '',
+      description: 'Spiced Indian tea with milk.',
+      category: 'the',
+      allergens: ['M'],
+    },
+    {
+      name: 'Chai Latte',
+      price: '39,-',
+      description: 'Creamy chai with milk and spices.',
+      category: 'the',
+      allergens: ['M'],
+    },
+    {
+      name: 'Pot of Tea for 2',
+      price: '69,-',
+      description: 'Pot of tea for two people.',
+      category: 'the',
+      allergens: [],
+    },
+
+    // 🍫 Hot Chocolate
+    {
+      name: 'Hot Chocolate with/without cream',
+      price: '49,-',
+      description: 'Rich chocolate drink, optionally with cream.',
+      category: 'hot chocolate',
+      allergens: ['M'],
+    },
+    {
+      name: 'Chili Cocoa',
+      price: '49,-',
+      description: 'Spicy hot chocolate with chili.',
+      category: 'hot chocolate',
+      allergens: ['M'],
+    },
+
+    // 🥭 Lassi (Yogurt drink)
+    {
+      name: 'Mango Lassi',
+      price: '69,-',
+      description: 'Refreshing mango yogurt drink.',
+      category: 'Lassi',
+      allergens: ['M'],
+    },
+    {
+      name: 'Salt Lassi',
+      price: '69,-',
+      description: 'Savory salted yogurt drink.',
+      category: 'Lassi',
+      allergens: ['M'],
+    },
+
+    // 🧃 Juice
+    {
+      name: 'Fresh Orange Juice',
+      price: '79,-',
+      description: 'Freshly squeezed orange juice.',
+      category: 'juice',
+      allergens: [],
+    },
+    {
+      name: 'Lemon Juice',
+      price: '79,-',
+      description: 'Refreshing lemon juice.',
+      category: 'juice',
+      allergens: [],
+    },
+
+    // 💧 Mineral Water
+    {
+      name: 'Jarritos Lime',
+      price: '59,-',
+      description: 'Jarritos Lime soda.',
+      category: 'mineral water',
+      allergens: [],
+    },
+    {
+      name: 'Jarritos Mandarin',
+      price: '59,-',
+      description: 'Jarritos Mandarin soda.',
+      category: 'mineral water',
+      allergens: [],
+    },
+    {
+      name: 'Jarritos Mexican Cola',
+      price: '59,-',
+      description: 'Jarritos Mexican Cola.',
+      category: 'mineral water',
+      allergens: [],
+    },
+    {
+      name: 'Jarritos Guava',
+      price: '59,-',
+      description: 'Jarritos Guava soda.',
+      category: 'mineral water',
+      allergens: [],
+    },
+    {
+      name: 'Only',
+      price: '54,-',
+      description: 'Only brand mineral water.',
+      category: 'mineral water',
+      allergens: [],
+    },
+    {
+      name: 'Apple Juice',
+      price: '54,-',
+      description: 'Refreshing apple juice.',
+      category: 'mineral water',
+      allergens: [],
+    },
+    {
+      name: 'Farris Green',
+      price: '54,-',
+      description: 'Carbonated mineral water (Green).',
+      category: 'mineral water',
+      allergens: [],
+    },
+    {
+      name: 'Farris Blue',
+      price: '54,-',
+      description: 'Carbonated mineral water (Blue).',
+      category: 'mineral water',
+      allergens: [],
+    },
+    {
+      name: 'Ginger Beer (0%)',
+      price: '89,-',
+      description: 'Non-alcoholic ginger beer.',
+      category: 'mineral water',
+      allergens: [],
+    },
+
+    // 🥤 LYKKE ORGANIC HANDICRAFT BEVERAGE
+    {
+      name: 'Lykki Rhubarb Drink',
+      price: '54,-',
+      description: 'Organic rhubarb soda by Lykki.',
+      category: 'mineral water',
+      allergens: [],
+    },
+    {
+      name: 'Lucky Cola',
+      price: '54,-',
+      description: 'Organic cola soda by Lykki.',
+      category: 'mineral water',
+      allergens: [],
+    },
+    {
+      name: 'Lykki Orange Soda',
+      price: '54,-',
+      description: 'Organic orange soda by Lykki.',
+      category: 'mineral water',
+      allergens: [],
+    },
+    {
+      name: 'Lykki Lemon Soda',
+      price: '54,-',
+      description: 'Organic lemon soda by Lykki.',
+      category: 'mineral water',
+      allergens: [],
+    },
+    {
+      name: 'Lykki Elderflower',
+      price: '54,-',
+      description: 'Organic elderflower soda by Lykki.',
+      category: 'mineral water',
+      allergens: [],
+    },
+    {
+      name: 'Lykki Wild Strawberries',
+      price: '54,-',
+      description: 'Organic wild strawberry soda by Lykki.',
+      category: 'mineral water',
+      allergens: [],
+    },
     {
       name: 'House Red Wine (Cremisan Baladi - Palestine)',
       price: 'Glass: 119,- / Bottle: 550,-',
@@ -463,6 +756,12 @@ export class DrinkMenuComponent {
   ];
 
   drinkCategories = [
+    'coffee',
+    'the',
+    'hot chocolate',
+    'Lassi',
+    'juice',
+    'mineral water',
     'Come',
     'Whisky',
     'Hetvin',
@@ -486,56 +785,4 @@ export class DrinkMenuComponent {
       (item) => item.category === category && item.subCategory === sub
     );
   }
-  // add these as categories
-
-  //   coffee
-
-  // Coffee • 36,-
-  // Refill • 16,-
-  // Arabic coffee • 36,-
-  // Espresso, simple • 36,-
-  // Espresso, double • 39,-
-  // American // Cropped (M) //
-  // Capuccino (M) // Café latte (M) //
-  // // Mocha-kaffe (M) • 44,-
-  // Read about our organic coffee
-  // the
-
-  // Salvie-te // Mynte-te // Kanel-te
-  // // Cardamom tea // Rooibos tea //
-  // Green tea // Ginger tea //
-  // Masala chai (M) // Chai latte  (M) • 39,-
-  // Pot of tea for 2 people • 69,-
-  // hot chocolate
-
-  // Sjokolade m/u cream   (M) // Chili cocoa (M)
-  // • 49,-
-  // Lassi
-  // (Yogurt drink)
-  // Mango lassi // Salt lassi (M) • 69,-
-  // Juice
-
-  // Fresh orange juice // lemon juice • 79,-
-  // mineral water
-
-  // Jarritos Lime • 59,-
-  // Jarritos Mandarin • 59,-
-  // Jarritos Mexican Cola • 59,-
-  // Jarritos Guava • 59,-
-  // Only • 54,-
-  // Apple juice • 54,-
-  // Farris green • 54,-
-  // Farris blue • 54,-
-  // Ginger beer, 0% • 89,-
-
-  // LYKKI ORGANIC HANDICRAFT BEVERAGE • 54,-
-  // Lykki soda is pure soda bliss! The soda is made with the
-  // the best organic ingredients and is completely free of
-  // additives. True craftsmanship and sustainable production.
-  // Lykki Rhubarb Drink
-  // Lucky Cola
-  // Lykki Orange Soda
-  // Lykki Lemon Soda
-  // Lykki Elderflower
-  // Lykki Wild Strawberries
 }
