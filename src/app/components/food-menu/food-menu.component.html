@@ -10,13 +10,13 @@
       [routerLink]="[]"
       fragment="lunch"
       class="px-3 py-1 rounded bg-gray-200 hover:bg-gray-300"
-      >🥗 Lunch</a
+      >🥗 Lunsj</a
     >
     <a
       [routerLink]="[]"
       fragment="main-courses"
       class="px-3 py-1 rounded bg-gray-200 hover:bg-gray-300"
-      >🍛 Main Courses</a
+      >🍛 Hovedretter</a
     >
     <a
       [routerLink]="[]"
@@ -28,40 +28,40 @@
       [routerLink]="[]"
       fragment="vegan"
       class="px-3 py-1 rounded bg-gray-200 hover:bg-gray-300"
-      >🌱 Vegan</a
+      >🌱 Vegansk</a
     >
     <a
       [routerLink]="[]"
       fragment="soups"
       class="px-3 py-1 rounded bg-gray-200 hover:bg-gray-300"
-      >🍲 Soups</a
+      >🍲 Supper</a
     >
     <a
       [routerLink]="[]"
       fragment="desserts"
       class="px-3 py-1 rounded bg-gray-200 hover:bg-gray-300"
-      >🍰 Desserts</a
+      >🍰 Desserter</a
     >
 
     <a
       [routerLink]="[]"
       fragment="drinks"
       class="px-3 py-1 rounded bg-gray-200 hover:bg-gray-300"
-      >🍷 Drinks</a
+      >🍷 Drikke</a
     >
   </div>
 </nav>
 
 <!-- Download Menu Section -->
 <div class="text-center my-8">
-  <h2 class="text-xl font-semibold mb-4">Download Our Menu</h2>
+  <h2 class="text-xl font-semibold mb-4">Last ned vår meny</h2>
   <div class="flex justify-center gap-4 flex-wrap">
     <a
       href="../../../assets/menu/Mela-Cafe-engelsk-A4-meny-februar-2025.pdf"
       download
       class="flex items-center gap-2 bg-black text-white px-4 py-2 rounded hover:bg-gray-800 transition"
     >
-      🇬🇧 English Menu
+      Engelsk Meny
       <i class="fas fa-download"></i>
     </a>
     <a
@@ -69,7 +69,7 @@
       download
       class="flex items-center gap-2 bg-black text-white px-4 py-2 rounded hover:bg-gray-800 transition"
     >
-      🇳🇴 Norsk Meny
+      Norsk Meny
       <i class="fas fa-download"></i>
     </a>
   </div>
@@ -78,7 +78,7 @@
 <div class="max-w-5xl mx-auto px-4 py-12 space-y-12">
   <!-- SECTION TEMPLATE -->
   <section id="lunch" class="scroll-mt-32" *ngIf="lunchMenu.length">
-    <h2 class="text-3xl font-bold mb-6 border-b pb-2">Lunch Menu</h2>
+    <h2 class="text-3xl font-bold mb-6 border-b pb-2">Lunsjmeny</h2>
     <div *ngFor="let item of lunchMenu" class="mb-6">
       <div class="flex justify-between items-start">
         <h3 class="text-lg font-semibold">{{ item.name }}</h3>
@@ -96,7 +96,7 @@
 
   <!-- Repeat this block for each category below -->
   <section id="main-courses" class="scroll-mt-32" *ngIf="mainCourses.length">
-    <h2 class="text-3xl font-bold mb-6 border-b pb-2">Main Courses</h2>
+    <h2 class="text-3xl font-bold mb-6 border-b pb-2">Hovedretter</h2>
     <div *ngFor="let item of mainCourses" class="mb-6">
       <div class="flex justify-between items-start">
         <h3 class="text-lg font-semibold">{{ item.name }}</h3>
@@ -152,7 +152,7 @@
   </section>
 
   <section id="vegan" class="scroll-mt-32" *ngIf="veganMenu.length">
-    <h2 class="text-3xl font-bold mb-6 border-b pb-2">Vegan Options</h2>
+    <h2 class="text-3xl font-bold mb-6 border-b pb-2">Veganske Alternativer</h2>
     <div *ngFor="let item of veganMenu" class="mb-6">
       <div class="flex justify-between items-start">
         <h3 class="text-lg font-semibold">{{ item.name }}</h3>
@@ -169,7 +169,7 @@
   </section>
 
   <section id="soups" class="scroll-mt-32" *ngIf="soups.length">
-    <h2 class="text-3xl font-bold mb-6 border-b pb-2">Soups</h2>
+    <h2 class="text-3xl font-bold mb-6 border-b pb-2">Supper</h2>
     <div *ngFor="let item of soups" class="mb-6">
       <div class="flex justify-between items-start">
         <h3 class="text-lg font-semibold">{{ item.name }}</h3>
@@ -186,7 +186,7 @@
   </section>
 
   <section id="desserts" class="scroll-mt-32" *ngIf="desserts.length">
-    <h2 class="text-3xl font-bold mb-6 border-b pb-2">Desserts & Cakes</h2>
+    <h2 class="text-3xl font-bold mb-6 border-b pb-2">Desserter & Kaker</h2>
     <div *ngFor="let item of desserts" class="mb-6">
       <div class="flex justify-between items-start">
         <h3 class="text-lg font-semibold">{{ item.name }}</h3>
