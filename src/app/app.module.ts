@@ -20,7 +20,6 @@ import { MenuComponent } from './pages/menu/menu.component';
 import { FoodMenuComponent } from './components/food-menu/food-menu.component';
 import { DrinkMenuComponent } from './components/drink-menu/drink-menu.component';
 import { ContactComponent } from './pages/contact/contact.component';
-import { ContactFormComponent } from './components/contact-form/contact-form.component';
 import { CateringComponent } from './pages/catering/catering.component';
 
 @NgModule({
@@ -37,7 +36,6 @@ import { CateringComponent } from './pages/catering/catering.component';
     FoodMenuComponent,
     DrinkMenuComponent,
     ContactComponent,
-    ContactFormComponent,
     CateringComponent
   ],
   imports: [

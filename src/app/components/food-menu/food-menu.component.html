@@ -43,9 +43,37 @@
       >🍰 Desserts</a
     >
 
-    <a [routerLink]="[]" fragment="drinks" class="px-3 py-1 rounded bg-gray-200 hover:bg-gray-300">🍷 Drinks</a>
+    <a
+      [routerLink]="[]"
+      fragment="drinks"
+      class="px-3 py-1 rounded bg-gray-200 hover:bg-gray-300"
+      >🍷 Drinks</a
+    >
   </div>
 </nav>
+
+<!-- Download Menu Section -->
+<div class="text-center my-8">
+  <h2 class="text-xl font-semibold mb-4">Download Our Menu</h2>
+  <div class="flex justify-center gap-4 flex-wrap">
+    <a
+      href="../../../assets/menu/Mela-Cafe-engelsk-A4-meny-februar-2025.pdf"
+      download
+      class="flex items-center gap-2 bg-black text-white px-4 py-2 rounded hover:bg-gray-800 transition"
+    >
+      🇬🇧 English Menu
+      <i class="fas fa-download"></i>
+    </a>
+    <a
+      href="../../../assets/menu/norwegian-menu.pdf"
+      download
+      class="flex items-center gap-2 bg-black text-white px-4 py-2 rounded hover:bg-gray-800 transition"
+    >
+      🇳🇴 Norsk Meny
+      <i class="fas fa-download"></i>
+    </a>
+  </div>
+</div>
 
 <div class="max-w-5xl mx-auto px-4 py-12 space-y-12">
   <!-- SECTION TEMPLATE -->
@@ -101,7 +129,12 @@
     </div>
   </section>
 
-  <section id="hummus" class="scroll-mt-32" class="scroll-mt-24" *ngIf="hummusEmpireMenu.length">
+  <section
+    id="hummus"
+    class="scroll-mt-32"
+    class="scroll-mt-24"
+    *ngIf="hummusEmpireMenu.length"
+  >
     <h2 class="text-3xl font-bold mb-6 border-b pb-2">Hummus Empire</h2>
     <div *ngFor="let item of hummusEmpireMenu" class="mb-6">
       <div class="flex justify-between items-start">
