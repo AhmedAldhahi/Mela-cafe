@@ -79,31 +79,31 @@
     }"
   >
     <nav class="flex flex-col space-y-2 text-gray-700 font-medium px-6 py-4">
-      <a href="/" class="hover:text-black transition">Home</a>
+      <a href="/" class="hover:text-black transition">Hjem</a>
       <a
         [routerLink]="['/menu']"
         [fragment]="'food'"
         class="hover:text-black transition"
       >
-        Menu
+      Meny
       </a>
       <a href="/catering" class="hover:text-black transition">Catering</a>
-      <a href="/contact" class="hover:text-black transition">Contact</a>
+      <a href="/contact" class="hover:text-black transition">Kontakt</a>
       <a
         href="#booking"
         class="bg-black text-white text-center py-2 rounded hover:bg-gray-800 transition"
       >
-        Book Now
+      Bestill nå
       </a>
 
       <!-- Mobile Language Switcher Dropdown -->
-      <select
+      <!-- <select
         (change)="switchLang($event)"
         class="border border-gray-300 rounded-md py-1 px-2 text-sm cursor-pointer mt-2"
       >
         <option value="en">English</option>
         <option value="no">Norsk</option>
-      </select>
+      </select> -->
     </nav>
   </div>
 </header>
