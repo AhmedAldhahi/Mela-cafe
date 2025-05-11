@@ -1,0 +1,23 @@
+// .images{
+//     display: flex;
+//     justify-content: center;
+//     flex-direction: row;
+//     align-items: center;
+//     margin: 5px;
+//     gap: 10px;
+//     width: 500px;
+// }
+
+.images {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  flex-direction: row;
+  gap: 10px;
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+img {
+  width: 300px;
+  border-radius: 5px;
+}
