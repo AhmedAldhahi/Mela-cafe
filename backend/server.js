@@ -18,16 +18,17 @@ const transporter = nodemailer.createTransport({
 
 // ✅ Booking form endpoint
 app.post("/api/send-booking-email", async (req, res) => {
-  const { name, email, phoneNumber, people, note } = req.body;
+  const { emne, name, email, phoneNumber, people, note } = req.body;
 
   const htmlTemplate = `
-      <h2>New Table Booking Request</h2>
-      <p><strong>Name:</strong> ${name}</p>
-      <p><strong>Email:</strong> ${email}</p>
-      <p><strong>Phone Number:</strong> ${phoneNumber}</p>
-      <p><strong>Number of People:</strong> ${people}</p>
-      <p><strong>Note:</strong> ${note || "No additional note"}</p>
-    `;
+  <h2>New Table Booking Request</h2>
+  <p><strong>Emne:</strong> ${emne}</p>
+  <p><strong>Name:</strong> ${name}</p>
+  <p><strong>Email:</strong> ${email}</p>
+  <p><strong>Phone Number:</strong> ${phoneNumber}</p>
+  <p><strong>Number of People:</strong> ${people}</p>
+  <p><strong>Note:</strong> ${note || "No additional note"}</p>
+`;
 
   const mailOptions = {
     from: process.env.EMAIL_USER,
@@ -42,14 +43,14 @@ app.post("/api/send-booking-email", async (req, res) => {
     to: email,
     subject: "Booking Confirmation - Mela Café",
     html: `
-        <h2>Thank you for your booking, ${name}!</h2>
-        <p>We have received your reservation for <strong>${people}</strong> people.</p>
-        <p><strong>Details:</strong></p>
-        <p><strong>Phone:</strong> ${phoneNumber}</p>
-        <p><strong>Note:</strong> ${note || "No additional note"}</p>
-        <p>We will contact you soon to confirm your booking. If you have any questions, just reply to this email.</p>
-        <p>— Mela Café Team</p>
-      `,
+      <h2>Thank you for your booking, ${name}!</h2>
+      <p>We have received your reservation for <strong>${people}</strong> people.</p>
+      <p><strong>Emne:</strong> ${emne}</p>
+      <p><strong>Phone:</strong> ${phoneNumber}</p>
+      <p><strong>Note:</strong> ${note || "No additional note"}</p>
+      <p>We will contact you soon to confirm your booking. If you have any questions, just reply to this email.</p>
+      <p>— Mela Café Team</p>
+    `,
   };
 
   try {
@@ -66,7 +67,6 @@ app.post("/api/send-booking-email", async (req, res) => {
     res.status(500).json({ message: "Failed to send emails.", error });
   }
 });
-
 
 // ✅ Contact form endpoint
 app.post("/api/send-contact-email", async (req, res) => {
