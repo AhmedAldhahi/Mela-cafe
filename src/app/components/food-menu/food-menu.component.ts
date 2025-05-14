@@ -8,7 +8,7 @@ import { Component } from '@angular/core';
 export class FoodMenuComponent {
   lunchMenu = [
     {
-      name: 'Stuffed',
+      name: 'dolma',
       price: '179,-',
       type: 'Vegansk',
       description:
@@ -23,14 +23,14 @@ export class FoodMenuComponent {
         'Fritert kikertblanding, servert med pitabrød og avokadohummus.',
       allergens: ['H', 'Sf', 'Sn'],
     },
-    {
-      name: 'Eplesalat',
-      price: '179,-',
-      type: 'Vegansk',
-      description:
-        'Blandet salat med rosiner og hvitløk braisert i olivenolje, granateple og eddik. Servert med pitabrød. (Man, Fre, Lør)',
-      allergens: [],
-    },
+    // {
+    //   name: 'Eplesalat',
+    //   price: '179,-',
+    //   type: 'Vegansk',
+    //   description:
+    //     'Blandet salat med rosiner og hvitløk braisert i olivenolje, granateple og eddik. Servert med pitabrød. (Man, Fre, Lør)',
+    //   allergens: [],
+    // },
     {
       name: 'Mulligatawny',
       price: '179,-',
@@ -38,37 +38,37 @@ export class FoodMenuComponent {
       description: 'Linsesuppe.',
       allergens: ['H'],
     },
-    {
-      name: 'Shakshuka',
-      price: '179,-',
-      type: 'Inneholder melk, egg',
-      description:
-        'Posjerte egg i en krydret tomatsaus med pitabrød ved siden av.',
-      allergens: ['H', 'E'],
-    },
-    {
-      name: 'Seekh Kebab',
-      price: '199,-',
-      type: 'Inneholder melk',
-      description:
-        'Seekh kebab på spyd, servert med pitabrød, salat og tzatziki.',
-      allergens: ['M', 'H'],
-    },
+    // {
+    //   name: 'Shakshuka',
+    //   price: '179,-',
+    //   type: 'Inneholder melk, egg',
+    //   description:
+    //     'Posjerte egg i en krydret tomatsaus med pitabrød ved siden av.',
+    //   allergens: ['H', 'E'],
+    // },
+    // {
+    //   name: 'Seekh Kebab',
+    //   price: '199,-',
+    //   type: 'Inneholder melk',
+    //   description:
+    //     'Seekh kebab på spyd, servert med pitabrød, salat og tzatziki.',
+    //   allergens: ['M', 'H'],
+    // },
     {
       name: 'Kylling Tawok',
-      price: '199,-',
+      price: '299,-',
       type: 'Inneholder melk',
-      description: 'Servert med bulgur, tzatziki og salat.',
+      description: 'Godt marinert utbenet kyllinglår fra grillen. Saftig og smakfull. Serveres med bulgur, pitabrød, avokadohummus, tzatziki og salat',
       allergens: ['M', 'H'],
     },
-    {
-      name: 'Mezah Lunsjtallerken (Vegetar/Kjøtt)',
-      price: '189,-/199,-',
-      type: 'Begge alternativer',
-      description:
-        'Variasjon av dagens mezah. Servert som vegetarisk eller kjøttrett med pitabrød.',
-      allergens: ['M', 'H', 'Sf'],
-    },
+    // {
+    //   name: 'Mezah Lunsjtallerken (Vegetar/Kjøtt)',
+    //   price: '189,-/199,-',
+    //   type: 'Begge alternativer',
+    //   description:
+    //     'Variasjon av dagens mezah. Servert som vegetarisk eller kjøttrett med pitabrød.',
+    //   allergens: ['M', 'H', 'Sf'],
+    // },
   ];
 
   mainCourses = [
@@ -79,7 +79,7 @@ export class FoodMenuComponent {
       allergens: ['M', 'H'],
     },
     {
-      name: 'Cardigan',
+      name: 'Kofta',
       price: '279,-',
       description:
         'Koftagryte, godt krydret kjøttdeig. Servert med salat, pitabrød, tzatziki og bulgur.',
@@ -100,16 +100,16 @@ export class FoodMenuComponent {
       allergens: ['M', 'H'],
     },
     {
-      name: 'Lammekoteletter',
-      price: '299,-',
-      description: 'Servert med bulgur, pitabrød, tzatziki og salat.',
+      name: 'Shakira Masala',
+      price: '279,-',
+      description:
+        'Oksegryte i smakfull yoghurtsaus med masala krydder. Anbefales. Serveres med bulgur, pitabrød, tzatziki og salat',
       allergens: ['M', 'H'],
     },
     {
-      name: 'Shakiria Masala',
-      price: '279,-',
-      description:
-        'Oksegryte i en velsmakende yoghurtsaus med masalakrydder. Anbefales! Servert med bulgur, pitabrød, tzatziki og salat.',
+      name: 'Lammekoteletter',
+      price: '299,-',
+      description: 'Servert med bulgur, pitabrød, tzatziki og salat.',
       allergens: ['M', 'H'],
     },
     {
@@ -137,7 +137,7 @@ export class FoodMenuComponent {
 
   mezahMenu = [
     {
-      name: 'Vegetarisk Mezah',
+      name: 'Vegetar Mezah',
       price: '315,-',
       description:
         'Seks forskjellige vegetariske mezahretter satt sammen av kokken. Perfekt for deling.',
@@ -185,31 +185,25 @@ export class FoodMenuComponent {
       allergens: ['H'],
     },
     {
-      name: 'Zaatar Pitabrød (Timian)',
+      name: 'Zaatar Pita (Timian)',
       price: '30,-',
       description: 'Hvete-pitabrød toppet med zaatar (timian).',
       allergens: ['H', 'Sf'],
     },
     {
-      name: 'Sterkt Pitabrød',
-      price: '30,-',
-      description: 'Sterkt krydret hvete-pitabrød.',
-      allergens: ['H'],
-    },
-    {
-      name: 'Hvitløks Pitabrød',
+      name: 'Hvitløkspita',
       price: '30,-',
       description: 'Pitabrød med hvitløk.',
       allergens: ['H'],
     },
     {
-      name: 'Ostet Pitabrød',
+      name: 'Chessy pita',
       price: '49,-',
       description: 'Pitabrød toppet med ost.',
       allergens: ['H', 'M', 'Sf'],
     },
     {
-      name: 'Mix Pitabrød',
+      name: 'Mix Pita',
       price: '59,-',
       description: 'Kombinasjonspitabrød med ost og andre toppinger.',
       allergens: ['H', 'M', 'Sf'],
@@ -218,89 +212,89 @@ export class FoodMenuComponent {
 
   hummusEmpireMenu = [
     {
-      name: 'Vegetarmix med Hummus',
+      name: 'Vegetar mix/Hummus',
       price: '289,-',
       description: 'Halloumi, börek med spinat og fetaost, ovnsbakte rotgrønnsaker og hummus. Inkluderer tzatziki, salat og pitabrød.',
       allergens: ['Sf', 'H', 'M'],
     },
     {
-      name: 'Halloumi med Hummus',
+      name: 'Halloumi/Hummus',
       price: '279,-',
       description: 'Halloumiost med hummus. Inkluderer tzatziki, salat og pitabrød.',
       allergens: ['Sf', 'H', 'M'],
     },
     {
-      name: 'Börek Minirull med Hummus',
+      name: 'Börek Minirull/Hummus',
       price: '279,-',
       description: 'Hummus med börek (spinat og fetaost). Inkluderer tzatziki, salat og pitabrød.',
       allergens: ['Sf', 'H', 'M'],
     },
     {
-      name: 'Arabisk Pølse med Hummus',
+      name: 'Arabisk Pølse/Hummus',
       price: '289,-',
       description: 'Sterk arabisk pølse med hummus. Inkluderer tzatziki, salat og pitabrød.',
       allergens: ['Sf', 'H', 'M'],
     },
     {
-      name: 'Oksekjøtt med Hummus',
+      name: 'Oksekjøtt/Hummus',
       price: '279,-',
       description: 'Smakfullt oksekjøtt fra gryte med hummus. Inkluderer tzatziki, salat og pitabrød.',
       allergens: ['Sf', 'H', 'M'],
     },
     {
-      name: 'Kjøttboller med Hummus',
+      name: 'Kjøttboller/Hummus',
       price: '279,-',
       description: 'Godt krydrede kjøttboller med hummus. Inkluderer tzatziki, salat og pitabrød.',
       allergens: ['Sf', 'H', 'M'],
     },
     {
-      name: 'Kylling med Hummus',
+      name: 'Kylling/Hummus',
       price: '299,-',
       description: 'Godt marinert kylling med hummus. Inkluderer tzatziki, salat og pitabrød.',
       allergens: ['Sf', 'H', 'M'],
     },
     {
-      name: 'Lammekoteletter med Hummus',
+      name: 'Lammekoteletter/Hummus',
       price: '299,-',
       description: 'Lammekoteletter med hummus. Inkluderer tzatziki, salat og pitabrød.',
       allergens: ['Sf', 'H', 'M'],
     },
     {
-      name: 'Seekh Kebab med Hummus',
+      name: 'Seekh Kebab/Hummus',
       price: '299,-',
       description: 'Tradisjonell Seekh kebab med hummus. Inkluderer tzatziki, salat og pitabrød.',
       allergens: ['Sf', 'H', 'M'],
     },
     {
-      name: 'Kyllinglår med Hummus',
+      name: 'Kyllingvinger/Hummus',
       price: '279,-',
       description: 'Grillede kyllinglår med hummus. Inkluderer tzatziki, salat og pitabrød.',
       allergens: ['Sf', 'H', 'M'],
     },
     {
-      name: 'Grillmix med Hummus',
+      name: 'Grillmix/Hummus',
       price: '319,-',
       description: 'Marinert kylling og Seekh kebab med hummus. Inkluderer tzatziki, salat og pitabrød.',
       allergens: ['Sf', 'H', 'M'],
     },
-    {
-      name: 'Sterk Hummus (Vegansk)',
-      price: '244,-',
-      description: 'Sterk hummus med ovnsbakte rotgrønnsaker, salat og pitabrød.',
-      allergens: ['Sf', 'H'],
-    },
+    // {
+    //   name: 'Sterk Hummus (Vegansk)',
+    //   price: '244,-',
+    //   description: 'Sterk hummus med ovnsbakte rotgrønnsaker, salat og pitabrød.',
+    //   allergens: ['Sf', 'H'],
+    // },
   ];
   
 
   veganMenu = [
     {
-      name: 'Sterk Hummus',
+      name: 'Spicy Hummus',
       price: '244,-',
       description: 'Med ovnsbakte rotgrønnsaker, salat og pitabrød.',
       allergens: ['Sf', 'H']
     },
     {
-      name: 'Sterk Sambosa',
+      name: 'Spicy Sambosa',
       price: '244,-',
       description: 'Med ovnsbakte rotgrønnsaker, salat og pitabrød.',
       allergens: ['H']
@@ -312,29 +306,17 @@ export class FoodMenuComponent {
       allergens: ['H', 'Sf', 'Sn']
     },
     {
-      name: 'Salat hos Mela',
+      name: 'dolma',
       price: '244,-',
-      description: 'Blandet salat med rosiner og hvitløk braisert i olivenolje, granateple og eddik. Servert med pitabrød. Kan lages uten allergener.',
-      allergens: ['H', 'Ma', 'N']
-    },
-    {
-      name: 'Stuffed',
-      price: '244,-',
-      description: 'Fylte vinblader med ris. Servert med bulgur, pitabrød og salat.',
+      description: 'Fylte vinblader med ris. Serveres med pitabrød og salat.',
       allergens: ['H']
     },
     {
-      name: 'Vegansk Falafelburger',
+      name: 'vegan falafelburger',
       price: '244,-',
-      description: 'Ren vegansk burger laget av falafeldeig. Servert med avokadohummus og salat.',
-      allergens: ['H', 'Sf', 'Sn']
+      description: 'Ren veganburger av falafeldeig. Serveres med avokadohummus og salat.',
+      allergens: ['H','Hf', 'Sn']
     },
-    {
-      name: 'Mulligatawny',
-      price: '239,-',
-      description: 'Linsesuppe.',
-      allergens: ['H']
-    }
   ];
   
 
@@ -350,28 +332,28 @@ export class FoodMenuComponent {
 
   desserts = [
     {
-      name: 'Baklava',
+      name: 'Baklawa',
       price: '120,-',
       description: 'Deigverk med pistasjnøtter. Veldig søt og veldig god!',
-      allergens: ['H', 'P', 'Ma', 'N']
+      allergens: ['H', 'Ma', 'N']
     },
     {
       name: 'Ostekake',
       price: '120,-',
-      description: 'Kjeksbunn med kremost og jordbær.',
+      description: 'Kjeksbunn med kremost og sitron',
       allergens: ['M', 'E', 'H', 'So', 'N']
     },
     {
-      name: 'Basbousa – Revani',
+      name: 'Creme Catalan',
       price: '120,-',
       description: 'Tradisjonell kake fra Midtøsten. Søt og deilig.',
       allergens: ['M', 'H', 'E', 'N']
     },
     {
-      name: 'Katalansk Krem',
+      name: 'Basbousa-Revani',
       price: '120,-',
-      description: 'Kremet tradisjonell dessert fra Catalonia.',
-      allergens: []
+      description: 'Tradisjonell kake fra midtøsten. Søt',
+      allergens: ['M', 'H', 'E', 'N']
     }
   ];
   

@@ -17,6 +17,7 @@ export class ContactComponent {
 
   ngOnInit(): void {
     this.contactForm = this.fb.group({
+      emne: ['', Validators.required, Validators.minLength(3)],
       name: ['', Validators.required],
       email: ['', [Validators.required, Validators.email]],
       message: ['', Validators.required],
@@ -26,6 +27,7 @@ export class ContactComponent {
   get f() {
     return this.contactForm.controls;
   }
+ 
 
   onSubmit(): void {
     if (this.contactForm.valid) {
