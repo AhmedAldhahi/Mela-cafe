@@ -70,10 +70,11 @@ app.post("/api/send-booking-email", async (req, res) => {
 
 // ✅ Contact form endpoint
 app.post("/api/send-contact-email", async (req, res) => {
-  const { name, email, message } = req.body;
+  const { emne, name, email, message } = req.body;
 
   const htmlTemplate = `
       <h2>New Contact Form Submission</h2>
+      <p><strong>Emne:</strong> ${emne}</P>
       <p><strong>Name:</strong> ${name}</p>
       <p><strong>Email:</strong> ${email}</p>
       <p><strong>Message:</strong> ${message}</p>
