@@ -32,7 +32,7 @@ app.post("/api/send-booking-email", async (req, res) => {
 
   const mailOptions = {
     from: process.env.EMAIL_USER,
-    to: "ahmed.aldhahi.a@gmail.com", // your personal receiving email
+    to: "post@melacafe.no", // your personal receiving email
     replyTo: email,
     subject: "New Table Booking Request",
     html: htmlTemplate,
@@ -82,7 +82,7 @@ app.post("/api/send-contact-email", async (req, res) => {
 
   const mailOptions = {
     from: process.env.EMAIL_USER,
-    to: "ahmed.aldhahi.a@gmail.com",
+    to: "post@melacafe.no",
     replyTo: email,
     subject: "New Contact Form Message",
     html: htmlTemplate,
