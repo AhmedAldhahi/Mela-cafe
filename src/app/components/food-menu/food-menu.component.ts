@@ -6,70 +6,70 @@ import { Component } from '@angular/core';
   styleUrl: './food-menu.component.scss',
 })
 export class FoodMenuComponent {
-  lunchMenu = [
-    {
-      name: 'dolma',
-      price: '179,-',
-      type: 'Vegansk',
-      description:
-        'Fylte vinblader med ris. Servert med bulgur, pitabrød og salat.',
-      allergens: ['H'],
-    },
-    {
-      name: 'Falafel',
-      price: '179,-',
-      type: 'Vegansk',
-      description:
-        'Fritert kikertblanding, servert med pitabrød og avokadohummus.',
-      allergens: ['H', 'Sf', 'Sn'],
-    },
-    // {
-    //   name: 'Eplesalat',
-    //   price: '179,-',
-    //   type: 'Vegansk',
-    //   description:
-    //     'Blandet salat med rosiner og hvitløk braisert i olivenolje, granateple og eddik. Servert med pitabrød. (Man, Fre, Lør)',
-    //   allergens: [],
-    // },
-    {
-      name: 'Mulligatawny',
-      price: '179,-',
-      type: 'Vegansk',
-      description: 'Linsesuppe.',
-      allergens: ['H'],
-    },
-    // {
-    //   name: 'Shakshuka',
-    //   price: '179,-',
-    //   type: 'Inneholder melk, egg',
-    //   description:
-    //     'Posjerte egg i en krydret tomatsaus med pitabrød ved siden av.',
-    //   allergens: ['H', 'E'],
-    // },
-    // {
-    //   name: 'Seekh Kebab',
-    //   price: '199,-',
-    //   type: 'Inneholder melk',
-    //   description:
-    //     'Seekh kebab på spyd, servert med pitabrød, salat og tzatziki.',
-    //   allergens: ['M', 'H'],
-    // },
-    {
-      name: 'Kylling Tawok',
-      price: '299,-',
-      type: 'Inneholder melk',
-      description: 'Godt marinert utbenet kyllinglår fra grillen. Saftig og smakfull. Serveres med bulgur, pitabrød, avokadohummus, tzatziki og salat',
-      allergens: ['M', 'H'],
-    },
-    // {
-    //   name: 'Mezah Lunsjtallerken (Vegetar/Kjøtt)',
-    //   price: '189,-/199,-',
-    //   type: 'Begge alternativer',
-    //   description:
-    //     'Variasjon av dagens mezah. Servert som vegetarisk eller kjøttrett med pitabrød.',
-    //   allergens: ['M', 'H', 'Sf'],
-    // },
-  ];
+  // lunchMenu = [
+  //   {
+  //     name: 'dolma',
+  //     price: '179,-',
+  //     type: 'Vegansk',
+  //     description:
+  //       'Fylte vinblader med ris. Servert med bulgur, pitabrød og salat.',
+  //     allergens: ['H'],
+  //   },
+  //   {
+  //     name: 'Falafel',
+  //     price: '179,-',
+  //     type: 'Vegansk',
+  //     description:
+  //       'Fritert kikertblanding, servert med pitabrød og avokadohummus.',
+  //     allergens: ['H', 'Sf', 'Sn'],
+  //   },
+  //   // {
+  //   //   name: 'Eplesalat',
+  //   //   price: '179,-',
+  //   //   type: 'Vegansk',
+  //   //   description:
+  //   //     'Blandet salat med rosiner og hvitløk braisert i olivenolje, granateple og eddik. Servert med pitabrød. (Man, Fre, Lør)',
+  //   //   allergens: [],
+  //   // },
+  //   {
+  //     name: 'Mulligatawny',
+  //     price: '179,-',
+  //     type: 'Vegansk',
+  //     description: 'Linsesuppe.',
+  //     allergens: ['H'],
+  //   },
+  //   // {
+  //   //   name: 'Shakshuka',
+  //   //   price: '179,-',
+  //   //   type: 'Inneholder melk, egg',
+  //   //   description:
+  //   //     'Posjerte egg i en krydret tomatsaus med pitabrød ved siden av.',
+  //   //   allergens: ['H', 'E'],
+  //   // },
+  //   // {
+  //   //   name: 'Seekh Kebab',
+  //   //   price: '199,-',
+  //   //   type: 'Inneholder melk',
+  //   //   description:
+  //   //     'Seekh kebab på spyd, servert med pitabrød, salat og tzatziki.',
+  //   //   allergens: ['M', 'H'],
+  //   // },
+  //   {
+  //     name: 'Kylling Tawok',
+  //     price: '299,-',
+  //     type: 'Inneholder melk',
+  //     description: 'Godt marinert utbenet kyllinglår fra grillen. Saftig og smakfull. Serveres med bulgur, pitabrød, avokadohummus, tzatziki og salat',
+  //     allergens: ['M', 'H'],
+  //   },
+  //   // {
+  //   //   name: 'Mezah Lunsjtallerken (Vegetar/Kjøtt)',
+  //   //   price: '189,-/199,-',
+  //   //   type: 'Begge alternativer',
+  //   //   description:
+  //   //     'Variasjon av dagens mezah. Servert som vegetarisk eller kjøttrett med pitabrød.',
+  //   //   allergens: ['M', 'H', 'Sf'],
+  //   // },
+  // ];
 
   mainCourses = [
     {
