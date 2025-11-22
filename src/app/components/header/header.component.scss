@@ -1,3 +1,198 @@
-@media screen and (max-width: 480px) {
+// Modern Header Styles
 
+header {
+    width: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    background: rgba(255, 255, 255, 0.95);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    box-shadow: 0 2px 20px rgba(0, 0, 0, 0.08);
+    z-index: 1000;
+
+    .max-w-7xl {
+        max-width: 1280px;
+        margin: 0 auto;
+        padding: 1rem 1.5rem;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    // Logo section
+    .flex.items-center {
+        display: flex;
+        align-items: center;
+        gap: 0.75rem;
+
+        a {
+            display: flex;
+            align-items: center;
+            gap: 0.75rem;
+            text-decoration: none;
+
+            img {
+                border-radius: 8px;
+                transition: transform 0.2s ease;
+
+                &:hover {
+                    transform: scale(1.05);
+                }
+            }
+        }
+    }
+
+    // Navigation links
+    nav {
+        display: none;
+        gap: 2rem;
+        align-items: center;
+
+        @media (min-width: 768px) {
+            display: flex;
+        }
+
+        a {
+            color: #374151;
+            font-weight: 500;
+            font-size: 0.9375rem;
+            text-decoration: none;
+            position: relative;
+            padding: 0.25rem 0;
+            transition: color 0.2s ease;
+
+            &::after {
+                content: '';
+                position: absolute;
+                bottom: 0;
+                left: 0;
+                width: 0;
+                height: 2px;
+                background: linear-gradient(90deg, #1f2937, #6b7280);
+                transition: width 0.3s ease;
+            }
+
+            &:hover {
+                color: #1f2937;
+
+                &::after {
+                    width: 100%;
+                }
+            }
+        }
+    }
+
+    // Book Now Button (Desktop) - Modern minimalist style
+    .hidden.md\\:block {
+        display: none;
+
+        @media (min-width: 768px) {
+            display: block;
+        }
+
+        a {
+            display: inline-block;
+            padding: 0.625rem 1.5rem;
+            background: #1f2937;
+            color: #ffffff;
+            font-weight: 600;
+            font-size: 0.9375rem;
+            border-radius: 8px;
+            text-decoration: none;
+            transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+            box-shadow: 0 2px 8px rgba(31, 41, 55, 0.2);
+
+            &:hover {
+                background: #111827;
+                transform: translateY(-1px);
+                box-shadow: 0 4px 12px rgba(31, 41, 55, 0.3);
+            }
+
+            &:active {
+                transform: translateY(0);
+            }
+        }
+    }
+
+    // Hamburger menu button
+    .md\\:hidden {
+        display: block;
+
+        @media (min-width: 768px) {
+            display: none;
+        }
+
+        button {
+            color: #1f2937;
+            padding: 0.5rem;
+            border-radius: 6px;
+            transition: background-color 0.2s ease;
+
+            &:focus {
+                outline: none;
+                background-color: rgba(0, 0, 0, 0.05);
+            }
+
+            svg {
+                width: 24px;
+                height: 24px;
+            }
+        }
+    }
+
+    // Mobile menu
+    .md\\:hidden.overflow-hidden {
+        @media (min-width: 768px) {
+            display: none;
+        }
+
+        overflow: hidden;
+        transition: max-height 0.7s ease-in-out;
+
+        &.max-h-0 {
+            max-height: 0;
+        }
+
+        nav {
+            display: flex;
+            flex-direction: column;
+            gap: 0.5rem;
+            padding: 1rem 1.5rem;
+
+            a {
+                color: #374151;
+                font-weight: 500;
+                padding: 0.75rem 0;
+                text-decoration: none;
+                transition: color 0.2s ease;
+
+                &:hover {
+                    color: #1f2937;
+                }
+
+                // Mobile "Bestill nå" button
+                &.bg-black {
+                    background: #1f2937;
+                    color: #ffffff;
+                    text-align: center;
+                    padding: 0.75rem;
+                    border-radius: 8px;
+                    margin-top: 0.5rem;
+                    font-weight: 600;
+                    transition: all 0.3s ease;
+
+                    &:hover {
+                        background: #111827;
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 480px) {
+    header .max-w-7xl {
+        padding: 0.875rem 1rem;
+    }
 }
